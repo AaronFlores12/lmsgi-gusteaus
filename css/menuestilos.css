@@ -46,7 +46,7 @@ main {
     background-color: #f5f5f5;
 }
 
-/* Estilos para alérgenos específicos */
+
 .menu-estrella li[data-alergenos="nueces"] {
     border-color: #8b6f47;
 }
@@ -59,7 +59,7 @@ main {
     border-color: #a36b38;
 }
 
-/* Estilos para el efecto :hover */
+
 .menu-estrella li:hover[data-alergenos="nueces"] {
     background-color: #f9ebcd;
 }
