@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+#contenedor {
+    background-color: #fff8f0;
+    overflow: hidden;
+}
+
+.encabezado {
+    background-image: url('../imgs/guesteaus.png');
+    background-size: cover;
+    color: #5a3e36;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    text-align: center;
+    height: 200px;
+    padding: 20px;
+    position: relative;
+}
+
+.encabezado::before {
+    content: "";
+    background-image: url('../imgs/favicon.png');
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu {
+    background-color: #a77e58;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #5a3e36;
+}
+
+.menu ul li:hover {
+    background-color: #8b6f47;
+}
+
+.contenido {
+    float: left;
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 5%;
+}
+
+.sidebar {
+    float: right;
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#contenedor::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pie {
+    background-color: #5a3e36;
+    color: #ecdcc6;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    clear: both;
+}
+
+.pie a {
+    color: #ecdcc6;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.reserva {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.reserva h3 {
+    text-align: center;
+}
+
+.reserva label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reserva input[type='text'],
+.reserva input[type='email'],
+.reserva input[type='tel'],
+.reserva textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #a77e58;
+    border-radius: 5px;
+    background-color: #fff8f0;
+}
+
+.reserva input[type='submit'] {
+    background-color: #5a3e36;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reserva input[type='submit']:hover {
+    background-color: #a77e58;
+}
+
+@media screen and (max-width: 768px) {
+    .contenido,
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .reserva input[type='text'],
+    .reserva input[type='email'],
+    .reserva input[type='tel'],
+    .reserva textarea {
+        width: 100%;
+    }
+}
